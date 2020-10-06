@@ -1,0 +1,6 @@
+ .personal label::before {
+     content: "* ";
+     color: red;
+     font-size: 1em;
+     
+ }

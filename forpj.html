@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/js.css">
+    <title>javascript</title>
+</head>
+<style>
+
+</style>
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <br><br><br>
+                    <!-- first progressbar -->
+                    <div class="col-md-12 col-sm-12 col-xs-10  outerdiv">
+
+
+                        <div class="col-md-10 col-xs-8" id="progressbardiv">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style=" margin-left: 25px; font-size: medium; "> Recommend:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+
+                                    <div class="progress ">
+                                        <div class="progress-bar progress-bar-success  " style="width: 75%; ">75%</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style="margin-left: 25px; font-size: medium;  ">Actual Value:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+                                    <div class="progress  ">
+                                        <div class="progress-bar " id="per" style="width: 0%;">
+                                            <!-- <div id="klm"></div> -->
+                                            <span id="sp">
+                                                0
+            
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-xs-2 visible-lg visible-md  " id="sensor">
+                            <b> Soil Moisture</b>
+
+                        </div>
+                        <div class="col-xs-2 visible-sm visible-xs  " id="invsensor">
+                            <b> Soil Moisture</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="row">
+
+                    <div class="col-md-2 col-md-offset-2 col-sm-2 col-xs-2">
+                        <button onclick="add2()" class="btn btn-default">25</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add3()" class="btn btn-default">50</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add6()" class="btn btn-default">70</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button onclick="add4()" class="btn btn-default">75</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button onclick="add5()" class="btn btn-default">80</button>
+                    </div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <br><br><br>
+                    <!-- second progressbar -->
+                    <div class="col-md-12 col-sm-12 col-xs-12 outerdiv">
+
+
+                        <div class="col-md-10 col-xs-8" id="progressbardiv">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style=" margin-left: 25px; font-size: medium; "> Recommend:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+
+                                    <div class="progress ">
+                                        <div class="progress-bar progress-bar-success  " style="width: 75%; ">75%</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style="margin-left: 25px; font-size: medium;  ">Actual Value:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+                                    <div class="progress  ">
+                                        <div class="progress-bar " id="per2" style="width: 0%;">
+                                            <!-- <div id="klm"></div> -->
+                                            <span id="sp2">
+                                                0
+            
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-xs-2 visible-lg visible-md  " id="sensor2">
+                            <b> Temperature & Humidity</b>
+
+                        </div>
+                        <div class="col-xs-2 visible-sm visible-xs  " id="invsensor2">
+                            <b> Temperature & Humidity</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <br>
+                <div class="row">
+
+                    <div class="col-md-2 col-md-offset-2 col-sm-2 col-xs-2">
+                        <button onclick="add1()" class="btn btn-default">25</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add7()" class="btn btn-default">50</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add8()" class="btn btn-default">70</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button onclick="add9()" class="btn btn-default">75</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add10()" class="btn btn-default">80</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <br><br><br>
+                    <!-- third progressbar -->
+                    <div class="col-md-12 col-sm-12 col-xs-12 outerdiv">
+
+
+                        <div class="col-md-10 col-xs-8" id="progressbardiv">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style=" margin-left: 25px; font-size: medium; "> Recommend:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+
+                                    <div class="progress ">
+                                        <div class="progress-bar progress-bar-success  " style="width: 75%; ">75%</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style="margin-left: 25px; font-size: medium;  ">Actual Value:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+                                    <div class="progress  ">
+                                        <div class="progress-bar " id="per3" style="width: 0%;">
+                                            <!-- <div id="klm"></div> -->
+                                            <span id="sp3">
+                                                0
+            
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-xs-2 visible-lg visible-md  " id="sensor">
+                            <b> Soil Condation</b>
+
+                        </div>
+                        <div class="col-xs-2 visible-sm visible-xs  " id="invsensor3">
+                            <b> Soil Condation</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-2 col-md-offset-2 col-sm-2 col-xs-2">
+                        <button onclick="add11()" class="btn btn-default">25</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add12()" class="btn btn-default">50</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add13()" class="btn btn-default">70</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button onclick="add14()" class="btn btn-default">75</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add15()" class="btn btn-default">80</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <br><br><br>
+                    <!-- fourth progressbar -->
+                    <div class="col-md-12 col-sm-12 col-xs-12 outerdiv">
+
+
+                        <div class="col-md-10 col-xs-8" id="progressbardiv">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style=" margin-left: 25px; font-size: medium; "> Recommend:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+
+                                    <div class="progress ">
+                                        <div class="progress-bar progress-bar-success  " style="width: 75%; ">75%</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-12">
+                                    <b style="margin-left: 25px; font-size: medium;  ">Actual Value:</b>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-xs-12" style="padding-top: 2px;">
+                                    <div class="progress  ">
+                                        <div class="progress-bar " id="per4" style="width: 0%;">
+                                            <!-- <div id="klm"></div> -->
+                                            <span id="sp4">
+                                                0
+            
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-xs-2 visible-lg visible-md  " id="sensor2">
+                            <b> Light Condation</b>
+
+                        </div>
+                        <div class="col-xs-2 visible-sm visible-xs  " id="invsensor2">
+                            <b> Light Condation</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-2 col-md-offset-2 col-sm-2 col-xs-2">
+                        <button onclick="add16()" class="btn btn-default">25</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add17()" class="btn btn-default">50</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add18()" class="btn btn-default">70</button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button onclick="add19()" class="btn btn-default">75</button>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 ">
+                        <button onclick="add20()" class="btn btn-default">80</button>
+                    </div>
+
+                </div>
+                <br><br><br><br>
+
+                <!-- <div class="row">
+
+
+                    <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                        <input type="text" id="add1" ;>
+
+                    </div>
+                    <div class="col-md-2 ">
+                        <input type="submit" onclick="add1();" value="output">
+
+                    </div>
+                </div>
+                </div> -->
+            </div>
+        </div>
+        <script>
+            var per = document.getElementById('per');
+            var per2 = document.getElementById('per2');
+            var per3 = document.getElementById('per3');
+            var per4 = document.getElementById('per4');
+
+            // function add1() {
+
+            //     document.getElementById('sp').innerHTML = document.getElementById('add1').value + '%';
+
+
+            //     var per = document.getElementById('per')
+            //     var add1 = Number(document.getElementById('add1').value);
+            //     // if (add1 <= 10) {
+
+
+
+            //     //     per.removeAttribute('class', 'style');
+            //     //     per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+            //     //     var progresswidth = add1;
+
+
+            //     //     // per.removeAttribute('style');
+            //     //     per.setAttribute('style', '"width:+"progresswidth"+10%"');
+
+
+
+
+            //     // }
+
+
+
+
+
+            //     if (add1 == 10) {
+            //         per.removeAttribute('class', 'style');
+            //         per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:10%');
+
+            //     }
+            //     if (add1 == 20) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:20%');
+
+            //     }
+            //     if (add1 == 30) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:30%');
+
+            //     }
+            //     if (add1 == 40) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:40%');
+
+            //     }
+            //     if (add1 == 50) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:50%');
+
+
+            //     }
+            //     if (add1 == 60) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:60%');
+
+
+            //     }
+            //     if (add1 == 70) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-info progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:70%');
+
+
+            //     }
+            //     if (add1 == 75) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-success progress-bar-striped ');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:75%');
+
+            //     }
+            //     if (add1 == 80) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-default progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:80%');
+
+            //     }
+            //     if (add1 == 90) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:90%');
+
+            //     }
+            //     if (add1 == 100) {
+            //         per.removeAttribute('class');
+            //         per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+
+            //         per.removeAttribute('style');
+            //         per.setAttribute('style', 'width:100%');
+
+            //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // }
+
+
+            // first progress bar function
+            function add6() {
+                document.getElementById('sp').innerHTML = '70%';
+                per.removeAttribute('class');
+                per.setAttribute('class', 'progress-bar progress-bar-info progress-bar-striped active');
+                per.removeAttribute('style');
+                per.setAttribute('style', 'width:70%');
+
+            }
+
+            function add2() {
+                document.getElementById('sp').innerHTML = '25%';
+                per.removeAttribute('class');
+                per.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+                per.removeAttribute('style');
+                per.setAttribute('style', 'width:25%');
+
+            }
+
+            function add3() {
+                document.getElementById('sp').innerHTML = '50%';
+                per.removeAttribute('class');
+                per.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+                per.removeAttribute('style');
+                per.setAttribute('style', 'width:50%');
+
+            }
+
+            function add4() {
+                document.getElementById('sp').innerHTML = '75%';
+                per.removeAttribute('class');
+                per.setAttribute('class', 'progress-bar progress-bar-success progress-bar-striped ');
+                per.removeAttribute('style');
+                per.setAttribute('style', 'width:75%');
+
+            }
+
+            function add5() {
+                document.getElementById('sp').innerHTML = '80%';
+
+                per.removeAttribute('class');
+                per.setAttribute('class', 'progress-bar progress-bar-primary progress-bar-striped active');
+                per.removeAttribute('style');
+                per.setAttribute('style', 'width:80%');
+
+            }
+
+            //second progress bar function
+            function add1() {
+                document.getElementById('sp2').innerHTML = '25%';
+                per2.removeAttribute('class');
+                per2.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+                per2.removeAttribute('style');
+                per2.setAttribute('style', 'width:25%');
+
+            }
+
+            function add7() {
+                document.getElementById('sp2').innerHTML = '50%';
+                per2.removeAttribute('class');
+                per2.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+                per2.removeAttribute('style');
+                per2.setAttribute('style', 'width:50%');
+
+            }
+
+            function add8() {
+                document.getElementById('sp2').innerHTML = '70%';
+                per2.removeAttribute('class');
+                per2.setAttribute('class', 'progress-bar progress-bar-info progress-bar-striped active');
+                per2.removeAttribute('style');
+                per2.setAttribute('style', 'width:70%');
+
+            }
+
+            function add9() {
+                document.getElementById('sp2').innerHTML = '75%';
+                per2.removeAttribute('class');
+                per2.setAttribute('class', 'progress-bar progress-bar-success progress-bar-striped ');
+                per2.removeAttribute('style');
+                per2.setAttribute('style', 'width:75%');
+
+            }
+
+            function add10() {
+                document.getElementById('sp2').innerHTML = '80%';
+                per2.removeAttribute('class');
+                per2.setAttribute('class', 'progress-bar progress-bar-primary progress-bar-striped active');
+                per2.removeAttribute('style');
+                per2.setAttribute('style', 'width:80%');
+
+            }
+            //third progress bar function
+            function add11() {
+                document.getElementById('sp3').innerHTML = '25%';
+                per3.removeAttribute('class');
+                per3.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+                per3.removeAttribute('style');
+                per3.setAttribute('style', 'width:25%');
+
+            }
+
+            function add12() {
+                document.getElementById('sp3').innerHTML = '50%';
+                per3.removeAttribute('class');
+                per3.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+                per3.removeAttribute('style');
+                per3.setAttribute('style', 'width:50%');
+
+            }
+
+            function add13() {
+                document.getElementById('sp3').innerHTML = '70%';
+                per3.removeAttribute('class');
+                per3.setAttribute('class', 'progress-bar progress-bar-info progress-bar-striped active');
+                per3.removeAttribute('style');
+                per3.setAttribute('style', 'width:70%');
+
+            }
+
+            function add14() {
+                document.getElementById('sp3').innerHTML = '75%';
+                per3.removeAttribute('class');
+                per3.setAttribute('class', 'progress-bar progress-bar-success progress-bar-striped ');
+                per3.removeAttribute('style');
+                per3.setAttribute('style', 'width:75%');
+
+            }
+
+            function add15() {
+                document.getElementById('sp3').innerHTML = '80%';
+                per3.removeAttribute('class');
+                per3.setAttribute('class', 'progress-bar progress-bar-primary progress-bar-striped active');
+                per3.removeAttribute('style');
+                per3.setAttribute('style', 'width:80%');
+
+            }
+            //fourth progress bar function
+
+            function add16() {
+                document.getElementById('sp4').innerHTML = '25%';
+                per4.removeAttribute('class');
+                per4.setAttribute('class', 'progress-bar progress-bar-danger progress-bar-striped active');
+                per4.removeAttribute('style');
+                per4.setAttribute('style', 'width:25%');
+
+            }
+
+            function add17() {
+                document.getElementById('sp4').innerHTML = '50%';
+                per4.removeAttribute('class');
+                per4.setAttribute('class', 'progress-bar progress-bar-warning progress-bar-striped active');
+                per4.removeAttribute('style');
+                per4.setAttribute('style', 'width:50%');
+
+            }
+
+            function add18() {
+                document.getElementById('sp4').innerHTML = '70%';
+                per4.removeAttribute('class');
+                per4.setAttribute('class', 'progress-bar progress-bar-info progress-bar-striped active');
+                per4.removeAttribute('style');
+                per4.setAttribute('style', 'width:70%');
+
+            }
+
+            function add19() {
+                document.getElementById('sp4').innerHTML = '75%';
+                per4.removeAttribute('class');
+                per4.setAttribute('class', 'progress-bar progress-bar-success progress-bar-striped ');
+                per4.removeAttribute('style');
+                per4.setAttribute('style', 'width:75%');
+
+            }
+
+            function add20() {
+                document.getElementById('sp4').innerHTML = '80%';
+                per4.removeAttribute('class');
+                per4.setAttribute('class', 'progress-bar progress-bar-primary progress-bar-striped active');
+                per4.removeAttribute('style');
+                per4.setAttribute('style', 'width:80%');
+
+            }
+        </script>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

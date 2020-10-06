@@ -1,0 +1,32 @@
+.slide-show img {
+    width: cover;
+    max-height: 400px;
+    min-height: 150px;
+}
+
+.portfolio img {
+    margin-bottom: 20px;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.ourcustomers img {
+    margin-bottom: 20px;
+}
+
+.sendmg input,
+.sendmg label {
+    margin-top: 10px;
+}
+
+.serviceimg img {
+    height: 300px;
+    width: 1200px;
+}
+
+.list {
+    margin-bottom: 10px;
+}
